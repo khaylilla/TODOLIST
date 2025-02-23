@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://image.myanimelist.net/ui/iFwdi4l06yUfakZDVoMBb0Nq5KdWba2B5Ijs6z6LUDMtRdEDt1pVnpGAId0reH481DHhnpWUsHarLvgW05nLs-t84QXZHlUokx6p9Z8-0ADu0xGox6cLHCdvy_zJEX7G");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.todo-app {
+    background: #a5c1bd;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(17, 25, 30, 0.2), 
+                0 30px 55px rgba(19, 27, 37, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #335d58;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    background: #d0ddd8;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin: 20px 0;
+    height: 50px;
+    align-items: center;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background: #629288;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.row button:hover {
+    background: #8dd9af;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 15px 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #d9e5df;
+    border-radius: 8px;
+    margin: 5px 0;
+    min-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    transition:box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+ul li:hover {
+    box-shadow: 0 5px 15px rgba(80, 236, 215, 0.89);
+}
+
+ul li span {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+ul li .check-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #bfbfbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+ul li .check-icon img {
+    width: 18px;
+    display: none;
+}
+
+ul li.completed .check-icon {
+    background: #27b092;
+}
+
+ul li.completed .check-icon img {
+    display: block;
+}
+
+ul li.completed .text-container {
+    text-decoration: line-through;
+    color: #b0b0b0;
+}
+
+ul li img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+ul li img:hover {
+    box-shadow: 0 5px 15px rgba(80, 236, 215, 0.89);
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url('circle.png');
+    background-size: cover;
+    background-position: center;
+    left: 10px;
+}
+
+toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #597464;
+}
+
+ul li.checked::before {
+    background-image: url('checklist.png');
+}
+
+
+.image-preview {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
